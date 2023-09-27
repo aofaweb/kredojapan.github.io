@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@400;500;600;700&display=swap');
+        *{
+         margin: 0;
+         padding: 0;
+         box-sizing: border-box;
+         outline: none;
+         border: none;
+        }
+    h1,h2,h3,h4,h5,h6 {
+        font-family: 'Frank Ruhl Libre', serif;
+    }
+    p {
+        font-family: 'Frank Ruhl Libre', serif;
+    }
+    .wrapper {
+        width: 100%;
+        margin: auto;
+    }
+    /* nav */
+
+    nav {
+        overflow: auto;
+        width: 85%;
+        margin: 0.5em auto;
+    }
+    nav a {
+        color: #96746b;
+    }
+    nav ul {
+        width: 60%;
+        text-align: center;
+        display: block;
+        margin-left:auto;
+        margin-right:auto;
+    }
+    nav li {
+        display: inline-block;
+        font-weight: 480;
+        padding: 10px;
+    }
+
+     /* banner */
+     .banner {
+        background-image: url(assets/images/atf.jpg);
+        background-size: cover;
+        background-position: center bottom;
+        position: relative;
+        width: 100%;
+        height: 640px;
+    }
+    .banner h2 {
+        font-size: 4em;
+        color: #fff;
+        text-align: right;
+    }
+    .banner p {
+        color:#fff;
+        font-size: 14pt;
+        text-align: right;
+    }
+    
+    .banner a {
+        text-decoration: none;
+        display: inline-block;
+        padding: 8px 16px 8px 16px;
+        background-color: #d6c182;
+        color: #fff;
+        font-weight: 500;
+        margin-top: 1em;
+        position:  absolute;
+        right: 0px;
+        border-radius: 4px;
+    }
+    .banner-box {
+        position: absolute;
+        top: 40%;
+        right: 7.5%;
+        transform: translateY(-50%);
+        width:60%;
+        color:#fff;
+    }
+
+    /* about */
+    .about {
+        width: 90%;
+        margin: 2em auto;
+        overflow: auto;
+        display: flex;
+        
+    }
+     .about-header{
+        width: 100%;
+        padding: 2em;
+     }
+     .about-header h2{
+        font-weight: 500;
+        color: black;
+        text-align: center;
+        padding: 20px;
+        font-size: 1.4em;
+    }
+    .about img {
+        height: 200px;
+	    width: 200px;
+	    object-fit: cover;
+    }
+    /* 横並び */
+    .container {
+        display: flex; 
+        justify-content: center; 
+        height: 42vh; 
+    }
+    .container img {
+        flex: 1; 
+        padding: 20px; 
+        height: 250px;
+	     width: 250px;
+	    object-fit: cover;
+        justify-content: center; 
+    }
+    .container {
+        flex: 1; 
+        padding-top: 0px; 
+        padding-left: 10%;
+        padding-right: 10%;  
+    }
+     .text-button {
+        flex: 1; 
+        padding-top: 0px; 
+        align-items: flex-start;
+        justify-content: center;
+    }
+    .button {
+        display: inline-block;
+         background-color: #d6c182;
+        color: #fff;
+        padding: 10px 20px;
+         text-decoration: none;
+         border-radius: 4px;
+         padding: 8px 16px 8px 16px;   
+    }
+    .text-button2 {
+        flex: 1; 
+        padding-top: 0px; 
+        align-items: flex-start;
+        justify-content: center;
+    }   
+    .button2 {
+        display: inline-block;
+        background-color: #d6c182;
+        color: #fff;
+        padding: 10px 20px;
+        text-decoration: none;
+        float: right;
+        border-radius: 4px;
+        padding: 8px 16px 8px 16px;
+    }
+    .container p{
+        display: table-cell;
+        vertical-align: top; 
+        padding-top: 20px;
+        padding-bottom: 8px;
+    }
+
+    /* form */
+    .form-group :nth-child(1) {
+        margin-right: 1%;
+    }
+    .form-group h3 {
+        font-size: 1.4em;
+    }
+    .form-group {
+        margin-top: 2em;
+        float: left;
+        width: 49.5%;
+        border-radius: 5px;
+        padding: 2em;
+        height: auto;
+        padding-right: 10%;
+    }
+    .reservation {
+        width: 100%;
+        overflow: auto;
+        background-color: #d6c182;
+        padding-left: 5%;
+        padding-left: 5%;
+    }
+    label {
+        display: inline-block;
+        margin-bottom: 0.7em;
+        font-weight: 500;
+        font-family: 'Frank Ruhl Libre', serif;
+    }
+    input {
+        display: inline-block;
+        width: 100%;
+        padding: 0.8em;
+        margin-bottom: 0.2em;
+        font-family: 'Frank Ruhl Libre', serif;
+        border-radius: 4px;
+    } 
+    .form-center {
+        width: 100%;
+        margin: 0.5em auto;
+        overflow: auto;
+        display: inline-block;
+        text-align:  center; 
+    }
+    .bt {
+        background-color: #0d0d0d;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: #fff;
+        margin-top: 8px;
+    }
+    .form-group h3 {
+        text-align: center;
+        margin: auto;
+        padding-bottom: 16px;
+    }
+    .form-t th {
+        width: 40%;
+        text-align: left;
+    }
+    .form-t td {
+        width: 60%;
+    }
+    .form-t {
+        width: 100%;
+    }
+    .book-t {
+        width: 100%;
+        font-family: 'Frank Ruhl Libre', serif;
+        padding-left: 10%;
+    }
+    .book-t thead {
+        background-color: black;
+        color: #fff;
+    }
+    .book-t table ,th ,td {
+        padding: 5px;
+        text-align: center;
+    }
+    .book-t tr:nth-child(even) {
+	background: #bfbfbf;
+    }
+    .book-t tr:nth-child(odd) {
+	background: none;
+    }
+    .book-t th, td {
+        padding: 10px;
+    }
+
+     /* footer */
+
+    footer {
+        color: black;
+        background-color: #dedede;
+        overflow: auto;
+        padding: 1em 7.5%;
+    }
+      </style>
+</head>
+<body>
+    <header>
+        <nav>
+        <ul>
+            <li>Home</li>            
+            <li>About</li>
+            <li><img src="assets/images/kredo-logo.png "width="72px"></li>
+            <li>Schedule</li>
+            <li>Contact</li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="banner">
+       <div class="banner-box">
+            <h2>Kredo Japan Online</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.Obcaeecati repellendus delectus dolorum cupiditate ex assumenda doloribus praesentium aperiam erro sequi!</P>
+            <a class="banner-a" href="#">Learn More</a>
+        </div>
+    </section>
+
+    <div class="about-header">
+        <h2>About</h2>
+    </div>
+    
+    <div class="container">
+        <div class="image">
+            <img src="assets/images/img1.png" alt="Image">
+        </div>
+        <div class="text-button">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus perspiciatis tempore, nihil impedit quis fuga reprehenderit minima fugiat provident, aperiam quibusdam nobis omnis expedita asperiores atque saepe consectetur eum sapiente unde corporis ut mollitia quasi. Repudiandae qui temporibus vitae illo.</p>
+            <a class="button">Learn More</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="text-button2">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, harum asperiores quos esse dolor consequatur enim? Dicta architecto, cum quaerat et molestiae nihil quibusdam sequi cupiditate consequatur minima voluptate harum quod laboriosam assumenda similique voluptatibus non placeat quisquam! Dignissimos, tenetur!</p>
+            <a class="button2">Learn More</a>
+        </div>
+        <div class="image">
+            <img src="assets/images/img2.png" alt="Image">
+        </div>
+    </div>
+
+    <div class="reservation">
+         <div class="form-group">
+            <h3>Book Couse Schedhle</h3>
+            <table class="form-t">
+                <tbody>
+                    <tr>
+                        <th>
+                            <label for="name">Full Name</label>
+                        </th>
+                        <td>
+                            <input type="text" name="name" id="name" >
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            <label for="age">Age</label>
+                        </th>
+                        <td>
+                            <input type="number" name="age" id="age">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            <label for="mail">Email</label>
+                        </th>
+                        <td>
+                            <input type="email" name="mail" id="mail">     
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            <label for="date">Reservation Date</label>
+                        </th>
+                        <td>
+                            <input type="date" name="date" id="date" value="date">   
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <input type="button" name="bt" id="bt" value="Book" class="bt">
+        </div>
+
+
+    <div class="form-group">
+        <h3>Booking List</h3>
+        <table class="book-t">
+            <tbody>
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Full Name</th>
+                        <th>Couse</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tr>
+                    <td>02/13/2023</td>
+                    <td>Bernardine Ragas</td>
+                    <td>Bootcamp</td>
+                    <td style="background-color: rgb(100, 224, 111);">Reserved</td>
+                </tr>
+                <tr>
+                    <td>02/13/2023</td>
+                    <td>Roel Pagalan</td>
+                    <td>Bootcamp</td>
+                    <td style="background-color: rgb(226, 180, 53);">Pending</td>
+                </tr>
+                <tr>
+                    <td>03/15/2023</td>
+                    <td>Antonio Sylvester</td>
+                    <td>Bootcamp</td>
+                    <td style="background-color: rgb(226, 180, 53);">Pending</td>
+                </tr>
+                <tr>
+                    <td>03/11/2023</td>
+                    <td>Jose Marie Chan</td>
+                    <td>Bootcamp</td>
+                    <td style="background-color: rgb(226, 180, 53);">Pending</td>
+                </tr>
+            </tbody>
+        </table>
+        </div>
+    </div>
+
+    <footer>
+        <div>
+            <p style="text-align: center; font-weight: 600;">Designed by Kredo Japan Online (c)2022</p>
+        </div>
+    </footer>
+            
+</body>
+</html>
